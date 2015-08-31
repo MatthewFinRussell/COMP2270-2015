@@ -1,0 +1,56 @@
+= COMP2270: Computer Architecture
+
+== September 1
+
+=== Introduce yourself
+Welcome! Let's get to know each other with an icebreaker. Answer these questions:
+
+* What is your name?
+* Why is Computer Science your major?
+* Tell us something nobody else in the room knows about you.
+
+=== About this course
+
+This course introduces digital logic, combinational and sequential circuit design,
+and computer architecture (hence the name).
+
+We'll have a midterm, labs and assignments, but for the final project,
+we'll design, implement and test a CPU in a simulator.
+
+https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md[Free programming books]
+
+== September 3
+
+=== Install Logisim
+
+
+
+=== Install Git and frontends
+
+Windows:: https://git-scm.com/download/win[Install Git for Windows]
++
+https://github.com/gitextensions/gitextensions/releases/latest[Install Git Extensions]
++
+NOTE: Select KDiff, and *choose OpenSSH* (not PuTTY); otherwise,
+stick to the default settings.
++
+image:http://lawrancej.github.io/starterupper/images/what2install.png[Install KDiff]
+image:http://lawrancej.github.io/starterupper/images/openssh.png[Choose OpenSSH]
+
+Mac OS X:: http://rowanj.github.io/gitx/[Install GitX-dev], then https://developer.apple.com/xcode/downloads/[Install XCode developer tools] which ships with git (recommended) or http://git-scm.com/download/mac[install git from here].
+
+Linux:: http://git-scm.com/download/linux[Install git] using your package manager.
++
+NOTE: Don't forget to use +sudo+ with your package manager.
+
+=== Run starterupper
+
+Starterupper sets up git and project hosting for this class;
+it is safe to run even if you already have git and SSH keys set up on your machine.
+
+Open Git Bash (Windows) or Terminal (Linux, Mac OS X) and paste in the command below.
+Press `Shift-Insert` to paste in Git Bash.
+
+----
+curl https://gitlab.com/lawrancej/COMP2270-2015/raw/master/main.sh | bash
+----
