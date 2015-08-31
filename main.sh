@@ -37,8 +37,25 @@ cd ~
 # Download starter upper
 curl -L https://github.com/lawrancej/starterupper/archive/master.zip 2> /dev/null > starterupper.zip
 # Extract
+# Try unzip
 unzip -o starterupper.zip > /dev/null 2>&1
-jar -xf starterupper.zip
+if [[ $? -ne 0 ]]; then
+    # No unzip? Try jar
+    jar -xf starterupper.zip
+    if [[ $? -ne 0 ]]; then
+        # No jar? Try powershell
+        cat << 'EOF' > unzip.ps1
+$shell = new-object -com shell.application
+$path = pwd
+$zip = $shell.NameSpace("$path\starterupper.zip")
+foreach($item in $zip.items()) {
+$shell.Namespace("$path").copyhere($item)
+}
+EOF
+        powershell -executionpolicy remotesigned -File unzip.ps1
+        rm unzip.ps1
+    fi
+fi
 # Move into hidden folder
 rm -rf .starterupper
 mv starterupper-master .starterupper
