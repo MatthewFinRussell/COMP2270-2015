@@ -46,7 +46,9 @@ stick to the default settings.
 image:http://lawrancej.github.io/starterupper/images/what2install.png[Install KDiff]
 image:http://lawrancej.github.io/starterupper/images/openssh.png[Choose OpenSSH]
 
-Mac OS X:: http://rowanj.github.io/gitx/[Install GitX-dev], then https://developer.apple.com/xcode/downloads/[Install XCode developer tools] which ships with git (recommended) or http://git-scm.com/download/mac[install git from here].
+Mac OS X:: http://git-scm.com/download/mac[Install git from here]
++
+http://rowanj.github.io/gitx/[Install GitX-dev]
 
 Linux:: http://git-scm.com/download/linux[Install git] using your package manager.
 +
