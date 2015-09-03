@@ -23,7 +23,11 @@ https://github.com/vhf/free-programming-books/blob/master/free-programming-books
 
 === Install Logisim
 
+Options:
 
+* http://www.cburch.com/logisim/download.html[Stable Logisim release]
+* https://github.com/lawrancej/logisim[Unstable Logisim release]
+* https://github.com/reds-heig/logisim-evolution[Logisim-evolution]
 
 === Install Git and frontends
 
