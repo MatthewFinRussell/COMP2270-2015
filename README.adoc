@@ -68,6 +68,8 @@ curl https://gitlab.com/lawrancej/COMP2270-2015/raw/master/main.sh | bash
 
 === Intermission
 
+Short break.
+
 === Number bases
 
 image:http://lawrancej.github.io/COMP278-2014/images/bases.svg[Number conversion overview]
