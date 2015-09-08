@@ -439,21 +439,21 @@ English is cumbersome, which is why we use compact and unambiguous logic express
 Boolean variables (e.g., a,b,c,x,y,z), constants (e.g., 0,1),
 parenthesized expressions or operations on expressions.
 
-You have seen logic expressions in C++ already.
+You may have seen logic expressions in C++ or Java already.
 
 ----
-// Boolean variables and constants
-bool a = true;
-bool b = false;
+// Boolean vectors
+int a = 1;
+int b = 0;
 // Logic expression
-bool f = !a && b || a && !b;
+int f = ~a & b | a & ~b;
 ----
 
-Logic expression notation in electronics differs from C++.
+Logic expression notation in electronics differs slightly from C++ or Java.
 
 [format="csv", options="header"]
 |===
-Operation , C++         , Electronics    , Meaning
+Operation , C++ or Java , Electronics    , Meaning
 Buffer    , `a`         , a              , **Identity**: just a
 NOT       , `~a`        , a'             , Invert a (flip the bit)
 AND       , `a & b`    , a * b          , **Conjunction**: Are both a and b true?
@@ -485,12 +485,12 @@ a   , b   , a'  , (a * b)' , (a + b)' , (a &oplus; b)'
 |===
 
 Logic expressions borrow notation from algebra.
-We intentionally write out AND as a * b,
-since AND corresponds to multiplication on single bits.
-This does not apply for OR: 0 + 1 = 1,
-but 1 + 1 = 2, not 1,
+Thus, AND as a * b, since it corresponds to multiplication on single bits.
+OR is almost addition: 0 + 1 = 1, but 1 + 1 = 2, not 1,
 which is why we read a + b as "a OR b", not "a plus b". 
 Buffer may seem pointless, but it can delay a signal in a circuit.
+
+=== Order of operations
 
 Logic operators also borrow order of operations from algebra.
 Remember PEMDAS? In logic, it's PNAO. 
