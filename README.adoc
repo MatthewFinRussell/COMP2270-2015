@@ -455,11 +455,11 @@ Logic expression notation in electronics differs from C++.
 |===
 Operation , C++         , Electronics    , Meaning
 Buffer    , `a`         , a              , **Identity**: just a
-NOT       , `!a`        , a'             , Invert a (flip the bit)
-AND       , `a && b`    , a * b          , **Conjunction**: Are both a and b true?
-NAND      , `!(a && b)` , (a * b)'       , Either a or b (or both) are false
-OR        , `a || b`    , a + b          , **Disjunction**: Are either a or b (or both) true?
-NOR       , `!(a || b)` , (a + b)'       , Are both a and b false?
+NOT       , `~a`        , a'             , Invert a (flip the bit)
+AND       , `a & b`    , a * b          , **Conjunction**: Are both a and b true?
+NAND      , `~(a & b)` , (a * b)'       , Either a or b (or both) are false
+OR        , `a | b`    , a + b          , **Disjunction**: Are either a or b (or both) true?
+NOR       , `~(a | b)` , (a + b)'       , Are both a and b false?
 XOR       , `a ^ b`     , (a &oplus; b)  , **Exclusive or**: Are a and b different?
 XNOR      , `(a == b)`  , (a &oplus; b)' , **Equality** Are a and b equal?
 |===
@@ -500,8 +500,8 @@ Remember PEMDAS? In logic, it's PNAO.
 Mnemonic  , Operation             , Remarks
 Please    , Parenthesis           , Group operations
 Note      , NOT                   , NOT is like a negative sign
-And       , AND, NAND             , AND is 1-bit multiplication
-Order     , OR, NOR, XOR, XNOR    , OR is almost addition
+And       , "AND, NAND"           , AND is 1-bit multiplication
+Order     , "OR, NOR, XOR, XNOR"  , OR is almost addition
 |===
 
 In logic expression a+b*c', we have three operations,
