@@ -637,6 +637,8 @@ Notice how the steps above convert the form of a law to its dual form?
 
 This is Z'*(X+Y).
 
+*Challenge*: Find the dual form of (a + b)' + c * a' + 1
+
 === Simplification
 
 Apply the laws of Boolean algebra to an expression or equation to simplify/prove it.
@@ -661,6 +663,8 @@ X*(Z + Y*(1)) = X*(Y+Z), Complements
 X*(Z + Y) = X*(Y+Z), Identity
 X*(Y + Z) = X*(Y+Z), Commutative law
 |===
+
+*Challenge*: Show (a * b)' * (a' + b) * (b' + b) = a'
 
 === Gray codes
 
@@ -689,6 +693,21 @@ Binary,Decimal,Gray code
 1110,0,1001
 1111,1,1000
 |===
+
+=== Binary -> Gray code
+
+. Shift the number to the right by one bit
+. Bitwise XOR the number and the original number
+
+In C, this is: `(num >> 1) ^ num`
+
+*Example*: What is the Gray code for 0b10110?
+
+----
+10110 num
+01011 num >> 1
+11101 bitwise XOR (Gray code)
+----
 
 What's the point?
 
