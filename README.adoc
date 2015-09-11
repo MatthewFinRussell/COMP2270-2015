@@ -724,9 +724,15 @@ http://www.ee.calpoly.edu/media/uploads/resources/KarnaughExplorer_1.html[Lets e
 
 == September 11
 
-Lab 1. Use a
+Lab 1.
+
+NOTE: Use a
 http://notepad-plus-plus.org/download/v6.6.9.html[a proper text editor],
 https://atom.io[such as this].
+
+=== How to submit work
+
+Stage -> Commit -> Push
 
 ----
 cd ~/COMP2270-2015
