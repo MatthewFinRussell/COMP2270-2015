@@ -731,7 +731,7 @@ https://atom.io[such as this].
 ----
 cd ~/COMP2270-2015
 git add lab1.txt
-git commit -m "Added lab 2 solution."
+git commit -m "Added lab 1 solution."
 git push origin master
 ----
 
