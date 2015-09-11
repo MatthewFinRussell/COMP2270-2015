@@ -724,7 +724,7 @@ http://www.ee.calpoly.edu/media/uploads/resources/KarnaughExplorer_1.html[Lets e
 
 == September 11
 
-Lab 1.
+Lab 1. *Due*: By next Friday at the latest.
 
 NOTE: Use a
 http://notepad-plus-plus.org/download/v6.6.9.html[a proper text editor],
