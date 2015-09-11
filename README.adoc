@@ -732,7 +732,7 @@ cd ~/COMP2270-2015
 touch lab1.txt
 ----
 
-NOTE: Use a
+NOTE: Use
 http://notepad-plus-plus.org/download/v6.6.9.html[a proper text editor],
 https://atom.io[such as this].
 
