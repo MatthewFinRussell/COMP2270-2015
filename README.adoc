@@ -725,6 +725,12 @@ http://www.ee.calpoly.edu/media/uploads/resources/KarnaughExplorer_1.html[Lets e
 == September 11
 
 Lab 1. *Due*: By next Friday at the latest.
+Save your work in a file called lab1.txt
+
+----
+cd ~/COMP2270-2015
+touch lab1.txt
+----
 
 NOTE: Use a
 http://notepad-plus-plus.org/download/v6.6.9.html[a proper text editor],
