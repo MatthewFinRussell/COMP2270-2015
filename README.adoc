@@ -725,7 +725,7 @@ http://www.ee.calpoly.edu/media/uploads/resources/KarnaughExplorer_1.html[Lets e
 == September 11
 
 Lab 1. *Due*: By next Friday at the latest.
-Save your work in a file called lab1.txt
+Save your work in a file called `lab1.txt` in your repo.
 
 ----
 cd ~/COMP2270-2015
