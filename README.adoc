@@ -758,7 +758,7 @@ git push origin master
 
 === Boolean algebra
 
-Use the laws of Boolean algebra
+Use the laws of Boolean algebra.
 
 . Show c + (b * c)' = 1
 . Show (a + c) * (a * d + a * d') + a * c + c = a + c
