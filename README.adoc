@@ -918,7 +918,7 @@ Registers are multiple flip-flops chained together to store things like integers
 When you declare a variable, like int i = 0, the compiler allocates i to a register and sets the value of that register.
 Most CPUs have at least two registers in them.
 
-== September 19
+== September 18
 
 === Lab 2: Combinational circuit design
 
