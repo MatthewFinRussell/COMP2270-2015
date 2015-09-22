@@ -1,5 +1,9 @@
 = COMP2270: Computer Architecture
 
+NOTE: https://gitlab.com/lawrancej/COMP2270-2015/blob/master/scribbles/scribbles.adoc[All whiteboard scribbles are here]
+
+NOTE: The class midterm is coming on October 2.
+
 == September 1
 
 === Introduce yourself
@@ -856,3 +860,155 @@ If your truth table has more rows than the multiplexer has inputs, write out a f
 . Align the outputs of your table to the inputs of the multiplexer.
 . The select bits will correspond to the input variables.
 . Ta-da!
+
+== September 17
+
+=== Combinational vs. Sequential logic
+
+At this point, everything we've talked about has concerned *combinational logic.*
+In combinational logic, outputs are functions of inputs.
+In other words, combinational logic has no memory.
+
+Today, we'll talk about *sequential logic.*
+In sequential logic, outputs are functions of inputs and *prior outputs.*
+Put another way, sequential logic is combinational logic + memory.
+
+=== Latches
+
+Latches are a single bit memory device.
+We can construct a latch using two NAND gates or two NOR gates.
+We have two inputs, S' and R', and an output Q.
+These are fed as input to the separate gates, leaving each gate with an empty pin for another input.
+The other input to each gate is the output of the other gate.
+Thus, the gates are cross-connected to each other, so the output is literally a function of inputs and prior outputs.
+
+In a latch, we can describe the behavior using a *characteristic table*, similar to a truth table.
+In a characteristic table, we describe the behavior of the circuit.
+
+(SR)' NAND latch characteristic table
+
+[format="csv",output="header"]
+|===
+S',R',Q
+0,0,Restricted state (here be dragons)
+0,1,Q=1 (Assign Q to 1)
+1,0,Q=0 (Assign Q to 0)
+1,1,No change
+|===
+
+Try it out for yourself.
+
+Latches are so called because they are *level-triggered.*
+Level-triggered means that the level (hi or lo voltage) of the input is what causes the value of Q (the memory) to change.
+
+=== Flip-flops
+
+Flip-flops, like latches, are a single bit memory device.
+Unlike latches, flip-flops are *edge-triggered.*
+Edge-triggered means that the transition from one input to another is what causes the value of the memory to change.
+There are two kinds of edge: rising edge (positive edge) and falling edge (negative edge), corresponding to the transition from low to hi and hi to lo, respectively.
+
+Flip-flops are made from latches, but with extra circuitry to make it edge-triggered.
+The circuitry itself takes advantage of solid-state physics to achieve the desired effect.
+Just as the speed of sound varies based on the medium (e.g., air, water), or the speed of light varies based on the medium (e.g., vacuum, fiber-optics, air), the speed at which electrons flow through a circuit varies based on the medium.
+Electrons flow at nearly the speed of light through good conductors such as copper, but flow slightly slower through semiconductors such as silicon (known as a *gate propagation delay* ).
+
+The expression x'+x is always equal to 1, but the circuit implementing this isn't always equal to 1, because of gate propagation delays.
+
+=== Registers
+
+A register is a multiple-bit memory device.
+Registers are multiple flip-flops chained together to store things like integers, characters, and such.
+When you declare a variable, like int i = 0, the compiler allocates i to a register and sets the value of that register.
+Most CPUs have at least two registers in them.
+
+== September 18
+
+=== Lab 2: Combinational circuit design
+
+Implement a full adder (a + b + cin) using two 4-1 multiplexers (one multiplexer for carry out, one multiplexer for sum, using the same input variables).
+
+[format="csv",output="header"]
+|===
+Carry-in,A,B,Sum (A+B),Carry-out
+0,0,0,0,0
+0,0,1,1,0
+0,1,0,1,0
+0,1,1,0,1
+1,0,0,1,0
+1,0,1,0,1
+1,1,0,0,1
+1,1,1,1,1
+|===
+
+=== Sequential design: Even/Odd number of zeroes and ones
+
+image:http://lawrancej.github.io/COMP278-2014/lab-instructions/lab5.svg[Vending machine state transition diagram]
+
+. Answer these questions about the state machine above.
+.. How many bits for state will you need?
+.. How many input bits will you need?
+. Then, map states to bits, and map inputs to bits.
+. Write out a state-transition table.
+. Finally, program a ROM to do said thing.
+
+=== Vending machine
+
+image:http://lawrancej.github.io/COMP278-2014/lab-instructions/lab5vending.svg[Vending machine state transition diagram]
+
+. Answer these questions about the state machine above.
+.. How many bits for state will you need?
+.. How many input bits will you need?
+. Then, map states to bits, and map inputs to bits. 
+. Write out a state-transition table.
+Since 25 cents is the final state, what happens if we get extra currency?
+Or, what happens if we get foreign currency?
+Feel free to transition to a "bogus" state (or states) for these purposes.
+. Finally, use a ROM to implement said thing.
+
+When you are done, save your work and do the following:
+
+----
+cd ~/COMP2270-2015
+git add lab2solution.*           # Stage your changes to the next commit
+git commit -am "Lab 2 complete." # Record your changes locally
+git push origin master           # Push your work
+----
+
+== September 22
+
+Continue Lab 2.
+
+----
+cd ~/COMP2270-2015
+git pull upstream master
+# If you see the word CONFLICT
+git mergetool
+start .    # On Windows
+open .     # On Mac
+xdg-open . # On Linux
+----
+
+== September 24
+
+Introduce CPU design in Logisim.
+
+== September 25
+
+Assembly programming the CPU.
+
+== September 29
+
+Midterm review.
+
+== October 1
+
+Midterm review.
+
+== October 2
+
+Midterm
+
+== October 9
+
+Modify the CPU. 
