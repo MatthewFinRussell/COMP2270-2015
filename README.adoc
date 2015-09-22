@@ -926,6 +926,8 @@ Most CPUs have at least two registers in them.
 
 === Lab 2: Combinational circuit design
 
+*Deadline*: By the next lab.
+
 Implement a full adder (a + b + cin) using two 4-1 multiplexers (one multiplexer for carry out, one multiplexer for sum, using the same input variables).
 
 [format="csv",output="header"]
