@@ -1,5 +1,9 @@
 = COMP2270: Computer Architecture
 
+NOTE: https://gitlab.com/lawrancej/COMP2270-2015/blob/master/scribbles/scribbles.adoc[All whiteboard scribbles are here]
+
+NOTE: The class midterm is coming on October 2.
+
 == September 1
 
 === Introduce yourself
@@ -970,3 +974,23 @@ git add lab2solution.*           # Stage your changes to the next commit
 git commit -am "Lab 2 complete." # Record your changes locally
 git push origin master           # Push your work
 ----
+
+== September 22
+
+Continue Lab 2.
+
+== September 24
+
+Introduce CPU design in Logisim.
+
+== September 25
+
+Assembly programming the CPU.
+
+== September 29
+
+Midterm review.
+
+== October 1
+
+Midterm review.
