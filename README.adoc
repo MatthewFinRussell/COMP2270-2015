@@ -984,6 +984,9 @@ cd ~/COMP2270-2015
 git pull upstream master
 # If you see the word CONFLICT
 git mergetool
+start .    # On Windows
+open .     # On Mac
+xdg-open . # On Linux
 ----
 
 == September 24
