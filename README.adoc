@@ -979,6 +979,13 @@ git push origin master           # Push your work
 
 Continue Lab 2.
 
+----
+cd ~/COMP2270-2015
+git pull upstream master
+# If you see the word CONFLICT
+git mergetool
+----
+
 == September 24
 
 Introduce CPU design in Logisim.
@@ -994,3 +1001,11 @@ Midterm review.
 == October 1
 
 Midterm review.
+
+== October 2
+
+Midterm
+
+== October 9
+
+Modify the CPU. 
