@@ -930,6 +930,8 @@ Most CPUs have at least two registers in them.
 
 Implement a full adder (a + b + cin) using two 4-1 multiplexers (one multiplexer for carry out, one multiplexer for sum, using the same input variables).
 
+NOTE: To test your work, use an adder (Arithmetic -> Adder), using a single data bit.
+
 [format="csv",output="header"]
 |===
 Carry-in,A,B,Sum (A+B),Carry-out
