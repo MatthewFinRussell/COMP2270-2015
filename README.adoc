@@ -995,15 +995,11 @@ xdg-open . # On Linux
 
 == September 24
 
-Introduce CPU design in Logisim.
+https://gitlab.com/lawrancej/COMP2270-2015/raw/master/exams/practice-midterm.pdf[Midterm review].
 
 == September 25
 
-Assembly programming the CPU.
-
-== September 29
-
-Midterm review.
+TBD
 
 == October 1
 
