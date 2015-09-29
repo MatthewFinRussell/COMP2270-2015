@@ -934,14 +934,14 @@ NOTE: To test your work, use an adder (Arithmetic -> Adder), using a single data
 
 [format="csv",output="header"]
 |===
-Carry-in,A,B,Sum (A+B),Carry-out
+Carry-in,A,B,Carry-out,Sum (A+B)
 0,0,0,0,0
-0,0,1,1,0
-0,1,0,1,0
-0,1,1,0,1
-1,0,0,1,0
-1,0,1,0,1
-1,1,0,0,1
+0,0,1,0,1
+0,1,0,0,1
+0,1,1,1,0
+1,0,0,0,1
+1,0,1,1,0
+1,1,0,1,0
 1,1,1,1,1
 |===
 
