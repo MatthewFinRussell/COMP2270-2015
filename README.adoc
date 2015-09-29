@@ -995,11 +995,16 @@ xdg-open . # On Linux
 
 == September 24
 
-https://gitlab.com/lawrancej/COMP2270-2015/raw/master/exams/practice-midterm.pdf[Midterm review].
+Out sick.
 
 == September 25
 
-TBD
+Out sick
+
+== September 29
+
+* Lab 2 walkthrough
+* https://gitlab.com/lawrancej/COMP2270-2015/raw/master/exams/practice-midterm.pdf[Midterm review].
 
 == October 1
 
@@ -1007,8 +1012,5 @@ Midterm review.
 
 == October 2
 
-Midterm
+Midterm?
 
-== October 9
-
-Modify the CPU. 
