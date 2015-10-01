@@ -926,18 +926,22 @@ Most CPUs have at least two registers in them.
 
 === Lab 2: Combinational circuit design
 
+*Deadline*: By the next lab.
+
 Implement a full adder (a + b + cin) using two 4-1 multiplexers (one multiplexer for carry out, one multiplexer for sum, using the same input variables).
+
+NOTE: To test your work, use an adder (Arithmetic -> Adder), using a single data bit.
 
 [format="csv",output="header"]
 |===
-Carry-in,A,B,Sum (A+B),Carry-out
+Carry-in,A,B,Carry-out,Sum (A+B)
 0,0,0,0,0
-0,0,1,1,0
-0,1,0,1,0
-0,1,1,0,1
-1,0,0,1,0
-1,0,1,0,1
-1,1,0,0,1
+0,0,1,0,1
+0,1,0,0,1
+0,1,1,1,0
+1,0,0,0,1
+1,0,1,1,0
+1,1,0,1,0
 1,1,1,1,1
 |===
 
@@ -957,6 +961,8 @@ image:http://lawrancej.github.io/COMP278-2014/lab-instructions/lab5.svg[Vending 
 image:http://lawrancej.github.io/COMP278-2014/lab-instructions/lab5vending.svg[Vending machine state transition diagram]
 
 . Answer these questions about the state machine above.
+.. List all possible inputs. How many do we have?
+.. List all possible states. How many do we have?
 .. How many bits for state will you need?
 .. How many input bits will you need?
 . Then, map states to bits, and map inputs to bits. 
@@ -964,6 +970,8 @@ image:http://lawrancej.github.io/COMP278-2014/lab-instructions/lab5vending.svg[V
 Since 25 cents is the final state, what happens if we get extra currency?
 Or, what happens if we get foreign currency?
 Feel free to transition to a "bogus" state (or states) for these purposes.
+. How many bits will we need for ROM address?
+. How many bits will we need for ROM data?
 . Finally, use a ROM to implement said thing.
 
 When you are done, save your work and do the following:
@@ -991,24 +999,27 @@ xdg-open . # On Linux
 
 == September 24
 
-Introduce CPU design in Logisim.
+Out sick.
 
 == September 25
 
-Assembly programming the CPU.
+Out sick
 
 == September 29
 
-Midterm review.
+* How to know you submitted work correctly
+* Lab 2 walkthrough
+* https://gitlab.com/lawrancej/COMP2270-2015/raw/master/exams/practice-midterm.pdf[Midterm review].
 
 == October 1
 
-Midterm review.
+* Lab 2 walkthrough (continued)
 
 == October 2
 
-Midterm
+Midterm review
 
 == October 9
 
-Modify the CPU. 
+Midterm
+

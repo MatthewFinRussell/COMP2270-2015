@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in $(ls *.jpg | grep -v new); do
+for file in *.jpg; do
     ./whiteboard.sh $file
 done
 
