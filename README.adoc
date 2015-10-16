@@ -1045,7 +1045,8 @@ Lab 3: Assembly/Machine language programming
 
 It's like CS1 all over again!
 
-https://gitlab.com/lawrancej/COMP2270-2015/blob/master/circuits/cpu-16bit-isa.adoc[Use for reference]
+* https://gitlab.com/lawrancej/COMP2270-2015/blob/master/circuits/cpu-16bit-isa.adoc[Use for reference]
+* https://github.com/lawrancej/COMP2270-2015/blob/master/circuits/cpu-16bit-isa.adoc[Use for reference]
 
 === Maximum
 
