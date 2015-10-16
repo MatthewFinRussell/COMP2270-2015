@@ -1052,6 +1052,16 @@ It's like CS1 all over again!
 
 1. Write out source code for a function that computes the maximum of two numbers.
 (Yes, I know practically every language has a `max(a,b)` function, I want you to write your own version).
+
+----
+int a = RAM[0x80]
+int b = RAM[0x81]
+int max = a;
+if (b > a) {
+    max = b;
+}
+----
+
 2. Write out equivalent assembly code for source code.
 One stipulation: the two numbers should be loaded from RAM.
 Hint: the STOR instruction doesn't work. Store the result into a register. To move data from Rs to Rd, ADD Rd, Rs, R0 (R0 is constant 0).
