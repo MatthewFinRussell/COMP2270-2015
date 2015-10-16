@@ -1034,3 +1034,44 @@ Midterm
 == October 13
 
 https://gitlab.com/lawrancej/COMP2270-2015/blob/master/circuits/cpu-16bit-isa.adoc[CPU stuff]
+
+== October 15
+
+Hand back midterms
+
+== October 16
+
+Lab 3: Assembly/Machine language programming
+
+It's like CS1 all over again!
+
+https://gitlab.com/lawrancej/COMP2270-2015/blob/master/circuits/cpu-16bit-isa.adoc[Use for reference]
+
+=== Maximum
+
+1. Write out source code for a function that computes the maximum of two numbers.
+(Yes, I know practically every language has a `max(a,b)` function, I want you to write your own version).
+2. Write out equivalent assembly code for source code.
+One stipulation: the two numbers should be loaded from RAM.
+Hint: the STOR instruction doesn't work. Store the result into a register. To move data from Rs to Rd, ADD Rd, Rs, R0 (R0 is constant 0).
+3. Write out equivalent machine code, and test it in Logisim, using the supplied CPU in `circuits/cpu-16bit.circ`. 
+4. Save the contents of RAM as lab7max.txt.
+
+=== Sum
+
+1. Write out source code for a function that computes the sum of an array of integers. 
+(Yes, I know practically every language has a sum(array) function, I want you to write your own version).
+Write it with the assumption that the length is given separately from the array: `int sum(int length, int[] array);`
+2. Write out equivalent assembly code for source code.
+One stipulation: the array should be loaded from RAM, and the size of the array should be read first.
+Hint: use the LOAD Ra instruction (opcode d in hex).
+3. Write out equivalent machine code, and test it in Logisim, using the supplied CPU in `circuits/cpu-16bit.circ`.
+4. Save the contents of RAM as lab7sum.txt.
+
+When you are done, save your work and do the following:
+
+----
+git add lab7*                    # Stage your changes to the next commit
+git commit -am "Lab 7 complete." # Record your changes locally
+git push origin master           # Push your work
+----
