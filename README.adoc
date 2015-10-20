@@ -1089,4 +1089,6 @@ git push origin master           # Push your work
 
 == October 20
 
-http://blog.codinghorror.com/the-infinite-space-between-words/[CPUs, cache, memory, etc.]
+* http://blog.codinghorror.com/the-infinite-space-between-words/[CPUs, cache, memory, etc.]
+* https://www.youtube.com/watch?v=Wiy_eHdj8kg[How hard drives work]
+* https://www.youtube.com/watch?v=jiejNAUwcQ8[How Liquid Crystal Displays work]
