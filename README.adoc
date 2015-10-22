@@ -1096,4 +1096,4 @@ git push origin master           # Push your work
 == October 21
 
 * https://en.wikipedia.org/wiki/Prefix_code[Prefix code stuff]
-* https://en.wikipedia.org/wiki/UTF-8[Unicode], http://www.asciitable.com/[ASCII], etc.
+* https://en.wikipedia.org/wiki/UTF-8[Unicode], http://www.asciitable.com/[ASCII], http://www.asciimation.co.nz/[etc.]
