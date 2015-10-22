@@ -1092,3 +1092,8 @@ git push origin master           # Push your work
 * http://blog.codinghorror.com/the-infinite-space-between-words/[CPUs, cache, memory, etc.]
 * https://www.youtube.com/watch?v=Wiy_eHdj8kg[How hard drives work]
 * https://www.youtube.com/watch?v=jiejNAUwcQ8[How Liquid Crystal Displays work]
+
+== October 21
+
+* https://en.wikipedia.org/wiki/Prefix_code[Prefix code stuff]
+* https://en.wikipedia.org/wiki/UTF-8[Unicode], http://www.asciitable.com/[ASCII], etc.
