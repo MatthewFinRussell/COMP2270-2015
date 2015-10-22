@@ -21,8 +21,8 @@ Program Control:`admm`:JZG Ra, mm:`if (Rd > 0) goto mm;`:
 Program Control:`bdmm`:JZL Ra, mm:`if (Rd < 0) goto mm;`:
 Bus Control:`cdmm`:LOAD Rd, mmm:`Rd = RAM[mmm]; // Rd = *(mmm);`: same as `MOV Rd, mmm` followed by `LOAD Rd`
 Bus Control:`ddxx`:LOAD Rd:`Rd = RAM[Rd]; // Rd = *(Rd);`: `xx` is discarded
-Bus Control:`esmm`:STOR Ra, mm:`RAM[mm] = Ra;`:The store instruction doesn't work at the moment
-Bus Control:`fsxx`:STOR Ra:`RAM[Ra & 0xff] = Ra;`:Ditto
+Bus Control:`eamm`:STOR Ra, mm:`RAM[mm] = Ra;`:The store instruction doesn't work at the moment
+Bus Control:`faxx`:STOR Ra:`RAM[Ra & 0xff] = Ra;`:Ditto
 :===
 
 [format="csv", options="header"]
