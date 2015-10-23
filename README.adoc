@@ -1110,6 +1110,7 @@ Lab 4.
 
 ----
 cd ~/COMP2270-2015
+git checkout -- circuits/cpu-16bit.circ
 git pull upstream master
 git checkout --theirs circuits/cpu-16bit.circ
 git add circuits/cpu-16bit.circ
