@@ -1104,9 +1104,9 @@ Welcome to the future
 
 == October 23
 
-Lab 4. Grab my changes.
+Lab 4.
 
-=== Logic gates to ROM
+=== Grab my changes
 
 ----
 cd ~/COMP2270-2015
@@ -1116,6 +1116,8 @@ git add circuits/cpu-16bit.circ
 git status
 git commit -m "Fixed merge conflict."
 ----
+
+=== Logic gates to ROM
 
 Open `circuits/cpu-16bit.circ` in Logisim.
 Replace the bus control's contents with a ROM, but leave the multiplexer alone, as show below:
