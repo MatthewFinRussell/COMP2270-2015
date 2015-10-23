@@ -1110,6 +1110,7 @@ Lab 4. Grab my changes.
 cd ~/COMP2270-2015
 git pull upstream master
 git checkout --theirs circuits/cpu-16bit.circ
+git add circuits/cpu-16bit.circ
 git status
 git commit -m "Fixed merge conflict."
 ----
