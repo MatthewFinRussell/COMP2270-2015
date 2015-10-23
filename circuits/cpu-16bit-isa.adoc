@@ -15,14 +15,14 @@ ALU:`4dab`:AND Rd, Ra, Rb:`Rd = Ra & Rb;`:Bitwise and
 ALU:`5dab`:OR  Rd, Ra, Rb:`Rd = Ra | Rb;`:Bitwise or
 ALU:`6dab`:XNOR Rd, Ra, Rb:`Rd = !(Ra ^ Rb);`:Bitwise equality
 ALU:`7dmm`:MOV Rd, mm:`Rd = mm;`:Copy constant mm
-Program Control:`8dmm`:JZE Ra, mm:`if (Ra == 0) goto mm;`:JZE R0, mm is equivalent to goto mm
-Program Control:`9dmm`:JZN Ra, mm:`if (Ra != 0) goto mm;`:
-Program Control:`admm`:JZG Ra, mm:`if (Ra > 0) goto mm;`:
-Program Control:`bdmm`:JZL Ra, mm:`if (Ra < 0) goto mm;`:
-Bus Control:`cdmm`:LOAD Rd, mmm:`Rd = RAM[mmm]; // Rd = *(mmm);`:
-Bus Control:`ddxx`:LOAD Rd:`Rd = RAM[Rd]; // Rd = *(Rd);`:
-Bus Control:`esmm`:STOR Rs, mm:`RAM[mm] = Rs;`:The store instruction doesn't work at the moment
-Bus Control:`fsxx`:STOR Rs:`RAM[Rs & 0xff] = Rs;`:Ditto
+Program Control:`8dmm`:JZE Ra, mm:`if (Rd == 0) goto mm;`:JZE R0, mm is equivalent to goto mm
+Program Control:`9dmm`:JZN Ra, mm:`if (Rd != 0) goto mm;`:
+Program Control:`admm`:JZG Ra, mm:`if (Rd > 0) goto mm;`:
+Program Control:`bdmm`:JZL Ra, mm:`if (Rd < 0) goto mm;`:
+Bus Control:`cdmm`:LOAD Rd, mmm:`Rd = RAM[mmm]; // Rd = *(mmm);`: same as `MOV Rd, mmm` followed by `LOAD Rd`
+Bus Control:`ddxx`:LOAD Rd:`Rd = RAM[Rd]; // Rd = *(Rd);`: `xx` is discarded
+Bus Control:`eamm`:STOR Ra, mm:`RAM[mm] = Ra;`:The store instruction doesn't work at the moment
+Bus Control:`faxx`:STOR Ra:`RAM[Ra & 0xff] = Ra;`:Ditto
 :===
 
 [format="csv", options="header"]

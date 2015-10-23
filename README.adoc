@@ -1031,3 +1031,95 @@ Midterm review? Again? Srsly?
 
 Midterm
 
+== October 13
+
+https://gitlab.com/lawrancej/COMP2270-2015/blob/master/circuits/cpu-16bit-isa.adoc[CPU stuff]
+
+== October 15
+
+Hand back midterms
+
+== October 16
+
+Lab 3: Assembly/Machine language programming
+
+It's like CS1 all over again!
+
+* https://gitlab.com/lawrancej/COMP2270-2015/blob/master/circuits/cpu-16bit-isa.adoc[Use for reference]
+* https://github.com/lawrancej/COMP2270-2015/blob/master/circuits/cpu-16bit-isa.adoc[Use for reference]
+
+=== Maximum
+
+1. Write out source code for a function that computes the maximum of two numbers.
+(Yes, I know practically every language has a `max(a,b)` function, I want you to write your own version).
+
+----
+int a = RAM[0x80]
+int b = RAM[0x81]
+int max = a;
+if (b > a) {
+    max = b;
+}
+----
+
+2. Write out equivalent assembly code for source code.
+One stipulation: the two numbers should be loaded from RAM.
+Hint: the STOR instruction doesn't work. Store the result into a register. To move data from Rs to Rd, ADD Rd, Rs, R0 (R0 is constant 0).
+3. Write out equivalent machine code, and test it in Logisim, using the supplied CPU in `circuits/cpu-16bit.circ`. 
+4. Save the contents of RAM as lab3max.txt.
+
+=== Sum
+
+1. Write out source code for a function that computes the sum of an array of integers. 
+(Yes, I know practically every language has a sum(array) function, I want you to write your own version).
+Write it with the assumption that the length is given separately from the array: `int sum(int length, int[] array);`
+2. Write out equivalent assembly code for source code.
+One stipulation: the array should be loaded from RAM, and the size of the array should be read first.
+Hint: use the LOAD Ra instruction (opcode d in hex).
+3. Write out equivalent machine code, and test it in Logisim, using the supplied CPU in `circuits/cpu-16bit.circ`.
+4. Save the contents of RAM as lab3sum.txt.
+
+When you are done, save your work and do the following:
+
+----
+git add lab3*                    # Stage your changes to the next commit
+git commit -am "Lab 3 complete." # Record your changes locally
+git push origin master           # Push your work
+----
+
+== October 20
+
+* http://blog.codinghorror.com/the-infinite-space-between-words/[CPUs, cache, memory, etc.]
+* https://www.youtube.com/watch?v=Wiy_eHdj8kg[How hard drives work]
+* https://www.youtube.com/watch?v=jiejNAUwcQ8[How Liquid Crystal Displays work]
+
+== October 21
+
+Welcome to the future
+
+== October 22
+
+* https://en.wikipedia.org/wiki/Prefix_code[Prefix code stuff]
+* https://en.wikipedia.org/wiki/UTF-8[Unicode], http://www.asciitable.com/[ASCII], http://www.asciimation.co.nz/[etc.]
+
+== October 23
+
+Lab 4. Grab my changes.
+
+----
+cd ~/COMP2270-2015
+git pull upstream master
+git checkout --theirs circuits/cpu-16bit.circ
+git add circuits/cpu-16bit.circ
+git status
+git commit -m "Fixed merge conflict."
+----
+
+Replace the bus control's contents with a ROM.
+It should have 6 input bits (corresponding to clock, cycle and op).
+It should have 4 output bits (corresponding to reg write, ALU enable, bus read, bus write).
+*Hint*: poke on inputs to see what the corresponding output is, and note that in a table.
+Then, take that table, and program the ROM accordingly.
+Note: there's no state involved, it's purely combinational.
+
+Make the store instruction work. I'll show how to fix.

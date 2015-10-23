@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for file in *.jpg; do
-    ./whiteboard.sh $file
+    ./whiteboard.sh "$file" svg
 done
 
 rm scribbles.adoc
