@@ -1124,9 +1124,12 @@ image:http://lawrancej.github.io/COMP2270-2015/labs/bus-control-rom.png[ROM repl
 
 The ROM should have 5 input bits (corresponding to clock, cycle and op's 3 MSBs), and 4 output bits (corresponding to reg write, ALU enable, bus read, bus write).
 We don't need the least significant bit of the opcode, because it does not influence the output in any way.
-*Hint*: poke on inputs to see what the corresponding output is, and note that in the below table (also available in `labs/bus-control-rom.csv`).
+
+*Hint*: poke on inputs to see what the corresponding output is, and note that in the table below (also available in `labs/bus-control-rom.csv`).
 Then, take that table, and program (and connect) the ROM accordingly.
-Note: there's no state involved, it's purely combinational.
+
+NOTE: There's no state involved, it's purely combinational.
+
 IMPORTANT: Test your CPU to ensure that your code from lab 3 is still functional. If not, you goofed up.
 
 [format="csv",options="header"]
