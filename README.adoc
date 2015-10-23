@@ -1095,5 +1095,30 @@ git push origin master           # Push your work
 
 == October 21
 
+Welcome to the future
+
+== October 22
+
 * https://en.wikipedia.org/wiki/Prefix_code[Prefix code stuff]
 * https://en.wikipedia.org/wiki/UTF-8[Unicode], http://www.asciitable.com/[ASCII], http://www.asciimation.co.nz/[etc.]
+
+== October 23
+
+Lab 4. Grab my changes.
+
+----
+cd ~/COMP2270-2015
+git pull upstream master
+git checkout --theirs circuits/cpu-16bit.circ
+git status
+git commit -m "Fixed merge conflict."
+----
+
+Replace the bus control's contents with a ROM.
+It should have 6 input bits (corresponding to clock, cycle and op).
+It should have 4 output bits (corresponding to reg write, ALU enable, bus read, bus write).
+*Hint*: poke on inputs to see what the corresponding output is, and note that in a table.
+Then, take that table, and program the ROM accordingly.
+Note: there's no state involved, it's purely combinational.
+
+Make the store instruction work. I'll show how to fix.
