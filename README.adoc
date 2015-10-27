@@ -1104,10 +1104,13 @@ Welcome to the future
 
 == October 23
 
-Lab 4. Grab my changes.
+Lab 4.
+
+=== Grab my changes
 
 ----
 cd ~/COMP2270-2015
+git checkout -- circuits/cpu-16bit.circ
 git pull upstream master
 git checkout --theirs circuits/cpu-16bit.circ
 git add circuits/cpu-16bit.circ
@@ -1115,11 +1118,79 @@ git status
 git commit -m "Fixed merge conflict."
 ----
 
-Replace the bus control's contents with a ROM.
-It should have 6 input bits (corresponding to clock, cycle and op).
-It should have 4 output bits (corresponding to reg write, ALU enable, bus read, bus write).
-*Hint*: poke on inputs to see what the corresponding output is, and note that in a table.
-Then, take that table, and program the ROM accordingly.
-Note: there's no state involved, it's purely combinational.
+=== Logic gates to ROM
 
-Make the store instruction work. I'll show how to fix.
+Open `circuits/cpu-16bit.circ` in Logisim.
+Replace the bus control's contents with a ROM, but leave the multiplexer alone, as show below:
+
+image:http://lawrancej.github.io/COMP2270-2015/labs/bus-control-rom.png[ROM replaces gates]
+
+The ROM should have 5 input (address) bits (corresponding to clock, cycle and op's 3 MSBs), and 4 output (data) bits (corresponding to reg write, ALU enable, bus read, bus write).
+We don't need the least significant bit of the opcode, because it does not influence the output in any way.
+
+*Hint*: poke on inputs to see what the corresponding output is, and note that in the table below (also available in `labs/bus-control-rom.csv`).
+Then, take that table, and program (and connect) the ROM accordingly.
+
+NOTE: There's no state involved, it's purely combinational.
+
+IMPORTANT: Test your CPU to ensure that your code from lab 3 is still functional. If not, you goofed up.
+
+[format="csv",options="header"]
+|===
+ROM address,Clock,Cycle,Op3,Op2,Op1,,Reg write,ALU enable,Bus read,Bus write
+0,0,0,0,0,0,,,,,
+1,0,0,0,0,1,,,,,
+2,0,0,0,1,0,,,,,
+3,0,0,0,1,1,,,,,
+4,0,0,1,0,0,,,,,
+5,0,0,1,0,1,,,,,
+6,0,0,1,1,0,,,,,
+7,0,0,1,1,1,,,,,
+8,0,1,0,0,0,,,,,
+9,0,1,0,0,1,,,,,
+10,0,1,0,1,0,,,,,
+11,0,1,0,1,1,,,,,
+12,0,1,1,0,0,,,,,
+13,0,1,1,0,1,,,,,
+14,0,1,1,1,0,,,,,
+15,0,1,1,1,1,,,,,
+16,1,0,0,0,0,,,,,
+17,1,0,0,0,1,,,,,
+18,1,0,0,1,0,,,,,
+19,1,0,0,1,1,,,,,
+20,1,0,1,0,0,,,,,
+21,1,0,1,0,1,,,,,
+22,1,0,1,1,0,,,,,
+23,1,0,1,1,1,,,,,
+24,1,1,0,0,0,,,,,
+25,1,1,0,0,1,,,,,
+26,1,1,0,1,0,,,,,
+27,1,1,0,1,1,,,,,
+28,1,1,1,0,0,,,,,
+29,1,1,1,0,1,,,,,
+30,1,1,1,1,0,,,,,
+31,1,1,1,1,1,,,,,
+|===
+
+=== Fix the store instruction
+
+Make the store instruction work. I'll show how to fix it.
+*Hint*: the RAM could be changed a bit to fix it without much grief.
+
+=== Submission
+
+Assuming that you save your work in `circuits/cpu-16bit.circ`, just do:
+
+----
+cd ~/COMP2270-2015
+git commit -am "Lab 4 done."
+git push origin master
+----
+
+If you saved your work somewhere else, be sure to stage (`git add` the file).
+
+== October 27
+
+== October 29
+
+== October 30
