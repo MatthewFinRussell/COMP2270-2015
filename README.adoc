@@ -1285,16 +1285,16 @@ Examples include: Brainfuck, http://www.bigmessowires.com/nibbler/[Nibbler], 650
 How wide are the registers? 8 bits? 16 bits? 32 bits?
 
 How many registers do you plan to implement in the register file?
+At a minimum, you will need a register to point to the current instruction (the program counter),
+and a register to store the current instruction.
+You will likely need a register to store the current microcode instruction and program counter.
+In addition, you will need registers to store data.
 
 Machines without a register file exist: they use stacks instead (see http://jasmin.sourceforge.net/about.html[JVM assembly]).
 Obviously, a register is still necessary to keep track of where we are in the stack, but in a "stack machine" the register isn't referenced directly as an operand.
 Instead, push and pop operations implicitly change the stack register.
 
-One register machines also exist: they use a single pointer in an array (see http://en.wikipedia.org/wiki/Brainfuck[Brainfuck]).
-
-Early Intel machines only had 2 identifiable registers, A and B.
-
-Supporting multiple registers arguably simplifies machine coding, but large register files are tricky to implement.
+Supporting multiple registers arguably simplifies machine coding, but large register files are tedious to implement.
 
 ==== Hints
 
