@@ -1228,13 +1228,7 @@ Goal: Set up your repository.
         cd
         git clone SSH_URL_FROM_GITLAB_BUT_DONT_TYPE_THIS_IN_LITERALLY
 
-. Add my repo as upstream
-
-        cd CPU-2015
-        git remote add upstream https://gitlab.com/lawrancej/CPU-2015.git
-        git pull upstream master
-
-. Add `lawrancej` as a collaborator (Repo settings -> collaborators)
+. Add `lawrancej` as a `Developer` collaborator (Members -> Add members)
 . Add each of your friend(s) as collaborators to your repository.
 . Add your friend(s) SSH urls to git.
 
