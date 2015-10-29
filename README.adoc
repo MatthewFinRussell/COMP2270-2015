@@ -1229,7 +1229,7 @@ Goal: Set up your repository.
         git clone SSH_URL_FROM_GITLAB_BUT_DONT_TYPE_THIS_IN_LITERALLY
 
 . Add `lawrancej` as a `Developer` collaborator (Members -> Add members)
-. Add each of your friend(s) as collaborators to your repository.
+. Add each of your friend(s) as `Developer` (not `Guest`) collaborators to your Gitlab repository.
 . Add your friend(s) SSH urls to git.
 
 		git remote add myFriendBob ssh_url_to_my_friend_bobs_rep_url_dont_type_this_literally
