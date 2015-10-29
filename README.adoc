@@ -1215,6 +1215,32 @@ Groups of 3 are okay, but larger groups are not recommended.
 
 Speed dating
 
+== October 29
+
+=== Repository setup
+
+Goal: Set up your repository.
+
+. Everybody on your team: https://gitlab.com/projects/new[Create a private repository for your CPU]
+. Copy the SSH clone URL from the web site
+. Do this:
+
+        cd
+        git clone SSH_URL_FROM_GITLAB_BUT_DONT_TYPE_THIS_IN_LITERALLY
+
+. Add my repo as upstream
+
+        cd CPU-2015
+        git remote add upstream https://gitlab.com/lawrancej/CPU-2015.git
+        git pull upstream master
+
+. Add `lawrancej` as a collaborator (Repo settings -> collaborators)
+. Add each of your friend(s) as collaborators to your repository.
+. Add your friend(s) SSH urls to git.
+
+		git remote add myFriendBob ssh_url_to_my_friend_bobs_rep_url_dont_type_this_literally
+        git fetch --all
+
 === Overview
 
 Goal: Decide on the parameters of your http://en.wikipedia.org/wiki/Central_processing_unit[CPU].
@@ -1228,7 +1254,7 @@ Example CPUs include:
 
 * http://minnie.tuhs.org/Programs/UcodeCPU/index.html[UcodeCPU]
 * http://minnie.tuhs.org/CompArch/Tutes/week03.html[Tutes]
-* http://db.grinnell.edu/sigcse/sigcse2013/Program/viewAcceptedProposal.pdf?sessionType=paper&sessionNumber=39[Simple CPU]
+* http://delivery.acm.org/10.1145/2450000/2445296/p335-schuurman.pdf[Simple CPU]
 * https://github.com/briandef/bf16[Brainfuck]
 
 Answer these questions, but remember, you will need to write a demonstration program for this CPU.
@@ -1293,8 +1319,5 @@ Memory-mapped I/O::
 
 Fix reset::
 * Allow the reset button to also reset the phase of the CPU
-
-
-== October 29
 
 == October 30
