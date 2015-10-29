@@ -1266,6 +1266,11 @@ simpler to implement with few (if any) consequences on machine code complexity.
 
 Decide on an http://en.wikipedia.org/wiki/Instruction_set[instruction set].
 
+Examples:
+
+* https://en.wikipedia.org/wiki/CHIP-8[CHIP-8]
+* https://en.wikipedia.org/wiki/Brainfuck[Brainfuck]
+
 The CPU *must* support at minimum: conditional jumps, arithmetic, logic, and loading and storing data to RAM.
 Examples include: Brainfuck, http://www.bigmessowires.com/nibbler/[Nibbler], 6502, http://jasmin.sourceforge.net/[jvm]
 
