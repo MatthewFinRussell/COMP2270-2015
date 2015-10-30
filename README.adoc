@@ -1222,8 +1222,7 @@ Speed dating
 Goal: Set up your repository.
 
 . Everybody on your team: https://gitlab.com/projects/new[Create a private repository for your CPU]
-. Copy the SSH clone URL from the web site
-. Do this:
+. Copy the SSH clone URL from the web site and do this:
 
         cd
         git clone SSH_URL_FROM_GITLAB_BUT_DONT_TYPE_THIS_IN_LITERALLY
@@ -1248,7 +1247,7 @@ Example CPUs include:
 
 * http://minnie.tuhs.org/Programs/UcodeCPU/index.html[UcodeCPU]
 * http://minnie.tuhs.org/CompArch/Tutes/week03.html[Tutes]
-* http://delivery.acm.org/10.1145/2450000/2445296/p335-schuurman.pdf[Simple CPU]
+* http://dl.acm.org/citation.cfm?id=2445196.2445296&coll=DL&dl=ACM&CFID=725866919&CFTOKEN=92187912[Simple CPU]
 * https://github.com/briandef/bf16[Brainfuck]
 
 Answer these questions, but remember, you will need to write a demonstration program for this CPU.
@@ -1320,3 +1319,6 @@ Fix reset::
 * Allow the reset button to also reset the phase of the CPU
 
 == October 30
+
+* Introduction to tunnels, logisim libraries, probes, bit extenders.
+* Research CPUs to implement or expand upon.
