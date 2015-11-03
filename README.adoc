@@ -1327,3 +1327,4 @@ Fix reset::
 
 * CPU data path
 * RISC vs CISC vs VLIW
+* https://en.wikipedia.org/wiki/Flynn's_taxonomy[Flynn's taxonomy]
