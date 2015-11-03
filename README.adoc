@@ -1322,3 +1322,8 @@ Fix reset::
 
 * Introduction to tunnels, logisim libraries, probes, bit extenders.
 * Research CPUs to implement or expand upon, and figure out how to break a CPU into its constituent parts (ALU, register file, control unit, etc.).
+
+== November 3
+
+* CPU data path
+* RISC vs CISC vs VLIW
