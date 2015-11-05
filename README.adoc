@@ -1222,8 +1222,7 @@ Speed dating
 Goal: Set up your repository.
 
 . Everybody on your team: https://gitlab.com/projects/new[Create a private repository for your CPU]
-. Copy the SSH clone URL from the web site
-. Do this:
+. Copy the SSH clone URL from the web site and do this:
 
         cd
         git clone SSH_URL_FROM_GITLAB_BUT_DONT_TYPE_THIS_IN_LITERALLY
@@ -1248,7 +1247,7 @@ Example CPUs include:
 
 * http://minnie.tuhs.org/Programs/UcodeCPU/index.html[UcodeCPU]
 * http://minnie.tuhs.org/CompArch/Tutes/week03.html[Tutes]
-* http://delivery.acm.org/10.1145/2450000/2445296/p335-schuurman.pdf[Simple CPU]
+* http://dl.acm.org/citation.cfm?id=2445196.2445296&coll=DL&dl=ACM&CFID=725866919&CFTOKEN=92187912[Simple CPU]
 * https://github.com/briandef/bf16[Brainfuck]
 
 Answer these questions, but remember, you will need to write a demonstration program for this CPU.
@@ -1266,6 +1265,11 @@ simpler to implement with few (if any) consequences on machine code complexity.
 
 Decide on an http://en.wikipedia.org/wiki/Instruction_set[instruction set].
 
+Examples:
+
+* https://en.wikipedia.org/wiki/CHIP-8[CHIP-8]
+* https://en.wikipedia.org/wiki/Brainfuck[Brainfuck]
+
 The CPU *must* support at minimum: conditional jumps, arithmetic, logic, and loading and storing data to RAM.
 Examples include: Brainfuck, http://www.bigmessowires.com/nibbler/[Nibbler], 6502, http://jasmin.sourceforge.net/[jvm]
 
@@ -1280,16 +1284,16 @@ Examples include: Brainfuck, http://www.bigmessowires.com/nibbler/[Nibbler], 650
 How wide are the registers? 8 bits? 16 bits? 32 bits?
 
 How many registers do you plan to implement in the register file?
+At a minimum, you will need a register to point to the current instruction (the program counter),
+and a register to store the current instruction.
+You will likely need a register to store the current microcode instruction and program counter.
+In addition, you will need registers to store data.
 
 Machines without a register file exist: they use stacks instead (see http://jasmin.sourceforge.net/about.html[JVM assembly]).
 Obviously, a register is still necessary to keep track of where we are in the stack, but in a "stack machine" the register isn't referenced directly as an operand.
 Instead, push and pop operations implicitly change the stack register.
 
-One register machines also exist: they use a single pointer in an array (see http://en.wikipedia.org/wiki/Brainfuck[Brainfuck]).
-
-Early Intel machines only had 2 identifiable registers, A and B.
-
-Supporting multiple registers arguably simplifies machine coding, but large register files are tricky to implement.
+Supporting multiple registers arguably simplifies machine coding, but large register files are tedious to implement.
 
 ==== Hints
 
@@ -1315,3 +1319,12 @@ Fix reset::
 * Allow the reset button to also reset the phase of the CPU
 
 == October 30
+
+* Introduction to tunnels, logisim libraries, probes, bit extenders.
+* Research CPUs to implement or expand upon, and figure out how to break a CPU into its constituent parts (ALU, register file, control unit, etc.).
+
+== November 3
+
+* CPU data path
+* RISC vs CISC vs VLIW
+* https://en.wikipedia.org/wiki/Flynn's_taxonomy[Flynn's taxonomy]
