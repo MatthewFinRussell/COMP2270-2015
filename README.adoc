@@ -1328,3 +1328,16 @@ Fix reset::
 * CPU data path
 * RISC vs CISC vs VLIW
 * https://en.wikipedia.org/wiki/Flynn's_taxonomy[Flynn's taxonomy]
+
+== November 5
+
+BF CPU building walk-through
+
+== November 6
+
+BF CPU building walk-through (continued)
+
+== November 10
+
+BF CPU building walk-through (continued)
+
