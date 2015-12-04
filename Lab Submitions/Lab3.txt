@@ -1,0 +1,169 @@
+Lab3 Max 
+Works 
+
+c180
+c281
+0310
+1421
+b406
+0320
+
+Lab3 Sum
+Not completly working
+
+c190
+c291
+c391
+c491
+c591
+c080
+0430
+c581
+0252
+0331
+b407
+
+Lab 3: Assembly/Machine language programming
+
+It’s like CS1 all over again!
+
+    Use for reference
+
+    Use for reference
+
+Maximum
+
+    Write out source code for a function that computes the maximum of two numbers. (Yes, I know practically every language has a max(a,b) function, I want you to write your own version).
+
+	
+int a = RAM[0x80]
+int b = RAM[0x81]
+int max = a;
+if (b > a) {
+    max = b;
+}
+	
+int a = RAM[0x80]
+int b = RAM[0x81]
+int max = a+0;		
+if (b - a < 0 ) goto end	
+max = b;		
+end: 
+
+
+
+
+    Write out equivalent assembly code for source code. One stipulation: the two numbers should be loaded from RAM. Hint: the STOR instruction doesn’t work. Store the result into a register. To move data from Rs to Rd, ADD Rd, Rs, R0 (R0 is constant 0).
+
+# R1 = a
+# R2 = b
+# R3 = max
+0 LOAD R1, 0x80 # int a = RAM[0x80]
+1 LOAD R2, 0x81 # int b = RAM[0x81]
+2 ADD R3, R1,R0 # int max = a+0;
+3 SUB R4, R2, R1 # b - a 
+4 JZL R4, 0x06 # if (b < a) goto end	
+5 ADD R3,R2,R0 # max = b		
+6 # YAY!
+
+
+    Write out equivalent machine code, and test it in Logisim, using the supplied CPU in circuits/cpu-16bit.circ.
+
+c180
+c281
+0310
+1421
+b406
+0320
+
+
+    Save the contents of RAM as lab3max.txt.
+
+
+
+Sum
+
+int sum(int length, int[] array);
+
+
+
+length = array.length
+
+int sum=0;
+I = 0;
+while (I + arraylocation < length + arraylocation)
+{
+sum = array[I]+ sum;
+I++;
+}
+
+
+
+
+
+int sum=0;
+I = 0;
+while (I - length < 0)
+{
+// hint: make a copy of i, because
+sum = array[I]+ sum;
+I++;
+}
+
+
+length = R0
+1    = R1
+sum = R2
+I = R3
+I = R4
+
+0 R1 = 0			LOAD c190	 R1=1
+1 R2 = 0			LOAD c291	 sum =0
+2 R3 = 0			LOAD c391	 I=0
+3 R4 = 0			LOAD c491	 I=0
+4 R5 = 0			LOAD c591	 int = 0
+5 R0 = [0x80]		LOAD c080
+6 R3-R0 = R4		ADD  0430
+7 R5 = [0x81]		LOAD c581	 
+8 R2 = R5 + R2		ADD  0252    sum=sum+int
+9 R3 = R3 + R1		ADD  0331    I++
+10 if (R4 < 0)	    JZL  b407
+
+c190
+c291
+c391
+c491
+c591
+c080
+0430
+c581
+0252
+0331
+b407
+
+
+
+
+
+
+
+
+
+{
+// hint: make a copy of i, because
+sum = array[I]+ sum;
+I++;
+}
+
+
+
+    Write out source code for a function that computes the sum of an array of integers. (Yes, I know practically every language has a sum(array) function, I want you to write your own version). Write it with the assumption that the length is given separately from the array: int sum(int length, int[] array);
+
+	R1 = 1
+
+    Write out equivalent assembly code for source code. One stipulation: the array should be loaded from RAM, and the size of the array should be read first. Hint: use the LOAD Ra instruction (opcode d in hex).
+
+    Write out equivalent machine code, and test it in Logisim, using the supplied CPU in circuits/cpu-16bit.circ.
+
+    Save the contents of RAM as lab3sum.txt.
+
